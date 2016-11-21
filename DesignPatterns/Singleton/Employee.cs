@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Singleton
@@ -13,6 +14,23 @@ namespace Singleton
             return FistName + " " + LastName;
         }
     }
+
+
+
+    /// <summary>
+    /// below static class cannot inherit class or implement interface and can't have non-static class instantiate.
+    /// </summary>
+
+    ////public static class EmployeeServiceStatic  : Employee //Cannot have extended list
+    
+    ////     <summary>
+    ////     cannot have non satic constructor
+    ////     </summary>
+    ////    public EmployeeServiceStatic()
+    ////    {
+            
+    ////    }
+    ////}
 
 
     /// <summary>
