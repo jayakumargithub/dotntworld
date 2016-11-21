@@ -1,0 +1,1 @@
+C:\Dotnetworld\DesignPatterns\Singleton\bin\Debug\ConsoleApplication1.exe.config
