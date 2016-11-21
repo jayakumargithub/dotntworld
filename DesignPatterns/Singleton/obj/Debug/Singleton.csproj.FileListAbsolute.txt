@@ -3,3 +3,4 @@ C:\Dotnetworld\DesignPatterns\Singleton\bin\Debug\Singleton.exe
 C:\Dotnetworld\DesignPatterns\Singleton\bin\Debug\Singleton.pdb
 C:\Dotnetworld\DesignPatterns\Singleton\obj\Debug\Singleton.exe
 C:\Dotnetworld\DesignPatterns\Singleton\obj\Debug\Singleton.pdb
+C:\Dotnetworld\DesignPatterns\Singleton\obj\Debug\Singleton.csprojResolveAssemblyReference.cache

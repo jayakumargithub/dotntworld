@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,8 +50,11 @@ namespace Singleton
 
     }
 
-    public class EmployeeServiceThreadSafe
+    public class EmployeeServiceThreadSafe : NavyEmployee, IEmployeeAddress
     {
+
+       
+
         private List<Employee> _employees;
         private static EmployeeServiceThreadSafe _empService;
 
@@ -58,6 +62,7 @@ namespace Singleton
 
         private EmployeeServiceThreadSafe()
         {
+           
             _employees = new List<Employee>();
         }
 
@@ -91,6 +96,19 @@ namespace Singleton
         {
             return _employees.Where(e => e.LastName == name).ToList();
         }
+
+        public string County { get; set; }
+    }
+
+
+    public class NavyEmployee : Employee
+    {
+        public string City { get; set; }
+    }
+
+    public interface IEmployeeAddress
+    {
+        string County { get; set; }
     }
 }
 
