@@ -1,0 +1,11 @@
+﻿
+<div class="row">
+    <h2>Error</h2>
+    <div class="alert alert-warning">
+        <p>An error occurred while processing your request.</p>
+        @if (ViewData["ErrorDetails"] != null)
+        {
+            <p>@ViewData["ErrorDetails"]</p>
+        }
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "X509 Key";
+}
+
+<h2><span data-bind="text: editDescription"></span> X509 Key</h2>
+<ul class="nav nav-pills">
+    <li>
+        <a href="@Url.Action("Index")">
+            <i class="icon-arrow-left"></i> Back to Keys</a>
+    </li>
+    <li class="hide" data-bind="css: { hide: isNew }">
+        <a data-bind="attr: { href:certUrl }">Download Certificate</a>
+    </li>
+</ul>
+<fieldset>
+    <legend></legend>
+    <div>
+        <label for="name">Name</label>
+        <input id="name" data-bind="value: name, valueUpdate: 'keyup'" />
+        <label class="text-error" data-bind="text: nameError"></label>
+    </div>
+    <div>
+        <label for="cert">Certificate</label>
+        <select class="input-xxlarge" id="cert" data-bind="options: certs, optionsText:'name', optionsValue:'value', value:thumbprint">
+        </select>
+        <label class="text-error" data-bind="text: thumbprintError"></label>
+    </div>
+    <div>
+        <label>Thumbprint</label>
+        <strong data-bind="text: thumbprint"></strong>
+    </div>
+    <div>
+        <label for="findType">Store Using</label>
+        <select class="input-xlarge" id="findType" data-bind="value: findType">
+            <option value="0">Thumbprint</option>
+            <option value="1">Subject Distinguished Name</option>
+        </select>
+    </div>
+    <div><button class="btn btn-primary" data-bind="click: save, disable: anyErrors">Save</button></div>
+</fieldset>
+
+@section scripts{
+    <script src="~/Areas/Admin/Scripts/X509Key.js"></script>
+}

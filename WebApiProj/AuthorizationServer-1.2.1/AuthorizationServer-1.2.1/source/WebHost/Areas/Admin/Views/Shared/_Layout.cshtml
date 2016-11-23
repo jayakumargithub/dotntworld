@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutWithMenu.cshtml";
+}
+
+@section css{
+    @Styles.Render("~/Content/admin")
+}
+
+@section nav{
+    @Html.Partial("Nav")
+}
+
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;                
+    }
+}
+
+<div id="main">
+    <span class="alert" id="message"></span>
+    @RenderBody()
+    <input type="hidden" id="antiForgeryToken" value="@GetAntiForgeryToken()" />
+</div>
+
+@section scripts{
+    @RenderSection("scripts", required: false)
+}

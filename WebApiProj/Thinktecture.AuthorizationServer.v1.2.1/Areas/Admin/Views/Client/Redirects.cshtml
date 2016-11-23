@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Client Redirect Uris";
+}
+
+<h2>@ViewBag.Title</h2>
+<ul class="nav nav-pills">
+    <li>
+        @{ var url = @Url.Action("Manage"); }
+        <a data-bind="attr: { href: '@url#' + $data.backId() }">
+            <i class="icon-arrow-left"></i> Back to Client</a>
+    </li>
+</ul>
+<fieldset data-bind="with:newUri" class="form-inline">
+    <legend></legend>
+    <div>
+        <label for="uri">Add Uri</label>
+        <input id="uri" data-bind="value: uri, valueUpdate: 'keyup'" />
+        <label for="description">Description</label>
+        <input id="description" data-bind="value: description, valueUpdate: 'keyup'" />
+        <button class="btn btn-primary" data-bind="click: function (data, e) { $parent.addUri(data) }, disable: anyErrors">Add</button>
+    </div>
+</fieldset>
+<table class="table table-striped hide table-condensed" data-bind="css: { hide: !uris().length }">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Uri</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: uris">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Delete
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" data-bind="click: function (data, evt) { $parent.deleteUri(data) }"><span class="icon-ok"></span>
+                                Confirm</a>
+                        </li>
+                        <li>                            
+                            <a href="#"><span class="icon-remove"></span>
+                                Cancel</a>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+            <td data-bind="text: uri"></td>
+            <td data-bind="text: description"></td>
+        </tr>
+    </tbody>
+</table>
+<p data-bind="css: { hide: uris().length }" class="alert alert-warning hide">
+    No Redirects Found
+</p>
+
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Scripts/ClientRedirects.js"></script>
+}
