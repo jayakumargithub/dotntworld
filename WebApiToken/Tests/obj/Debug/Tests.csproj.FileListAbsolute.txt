@@ -1,0 +1,4 @@
+C:\Dotnetworld\WebApiToken\Tests\bin\Debug\Tests.dll
+C:\Dotnetworld\WebApiToken\Tests\bin\Debug\Tests.pdb
+C:\Dotnetworld\WebApiToken\Tests\obj\Debug\Tests.dll
+C:\Dotnetworld\WebApiToken\Tests\obj\Debug\Tests.pdb
