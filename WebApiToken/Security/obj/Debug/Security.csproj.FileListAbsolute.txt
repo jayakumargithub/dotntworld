@@ -13,3 +13,4 @@ C:\Dotnetworld\WebApiToken\Security\bin\Debug\Newtonsoft.Json.xml
 C:\Dotnetworld\WebApiToken\Security\bin\Debug\System.Web.Http.xml
 C:\Dotnetworld\WebApiToken\Security\obj\Debug\Security.dll
 C:\Dotnetworld\WebApiToken\Security\obj\Debug\Security.pdb
+C:\Dotnetworld\WebApiToken\Security\obj\Debug\Security.csprojResolveAssemblyReference.cache

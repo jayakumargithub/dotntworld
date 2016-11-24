@@ -1,0 +1,6 @@
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\bin\WebApiAngularClient.dll.config
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\bin\WebApiAngularClient.dll
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\bin\WebApiAngularClient.pdb
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\obj\Debug\WebApiAngularClient.csprojResolveAssemblyReference.cache
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\obj\Debug\WebApiAngularClient.dll
+C:\Dotnetworld\WebApiToken\WebApiAngularClient\obj\Debug\WebApiAngularClient.pdb

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<h2>Login</h2>
+    
+    <form ng-submit="login()">
+        <div>
+            <label>Username:</label>
+            <input type="text" ng-mogel="accoutn.username"/>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" ng-mogel="accoutn.password" />
+        </div>
+        <input type="submit"/>
+        <div style="color:Red">{{message}}</div>
+    </form>
+</body>
+</html>
